@@ -15,3 +15,5 @@ javac Client.java
 java Client
 ```
 Frequent itemset dataset is in `data.txt`
+
+![alt text](img/Frequent%20Itemset%20-%204%20servers%20load%20balancing.png)
