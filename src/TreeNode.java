@@ -46,8 +46,6 @@ class TreeNode {
 		 */
 		try {
 			DatagramSocket socket = new DatagramSocket();
-//			System.out.printf("Node=%s, freq of B=%d\n", full_reference, item_table.get('B'));
-//			System.out.printf("Node=%s, freq of C=%d\n", full_reference, item_table.get('C'));
 			System.out.printf("[Node %s] processing %s\n",full_reference, transaction);
 
 			if (truncated_transaction.length() == 0) {
@@ -76,13 +74,9 @@ class TreeNode {
 				support++;
 
 				// update item_table & combo-table
-//				System.out.printf("Node=%s about to update w/ truncated=%s\n", full_reference, truncated_transaction);
-//				System.out.printf("Node=%s, freq of C=%d\n", full_reference, item_table.get('C'));
 				update_item_table(truncated_transaction);
 				update_combo_table(truncated_transaction);
 				
-				// System.out.println("before entering: ");
-				// print_two_table();
 				// when necessary, create a new node and store it
 				create_new_node_when_enough_support();
 
